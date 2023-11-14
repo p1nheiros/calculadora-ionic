@@ -54,6 +54,14 @@ git clone https://github.com/p1nheiros/calculadora-ionic.git
         </sub>
       </a>
     </td>
+    <td>
+      <a href="https://github.com/CaioSargon">
+        <img src="https://avatars.githubusercontent.com/u/125319279?v=4" width="100px;" alt="Caio Sargon"/><br>
+        <sub>
+          <b>Caio Sargon</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
 

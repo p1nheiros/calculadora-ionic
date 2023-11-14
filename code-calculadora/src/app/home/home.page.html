@@ -33,7 +33,7 @@
           <ion-button (click)="digitos('9')" color="dark">9</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button (click)="operadores(' + ')" color="light">+</ion-button>
+          <ion-button (click)="operadores('+')" color="light">+</ion-button>
         </ion-col>
       </ion-row>
 
@@ -48,7 +48,7 @@
           <ion-button (click)="digitos('6')" color="dark">6</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button (click)="operadores(' - ')" color="light">-</ion-button>
+          <ion-button (click)="operadores('-')" color="light">-</ion-button>
         </ion-col>
       </ion-row>
 
@@ -63,7 +63,7 @@
           <ion-button (click)="digitos('3')" color="dark">3</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button (click)="operadores(' * ')" color="light">*</ion-button>
+          <ion-button (click)="operadores('*')" color="light">*</ion-button>
         </ion-col>
       </ion-row>
 
@@ -78,13 +78,13 @@
           <ion-button (click)="calcular()" color="warning">=</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button (click)="operadores(' / ')" color="light">/</ion-button>
+          <ion-button (click)="operadores('/')" color="light">/</ion-button>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col>
-          <ion-button class="btn2" (click)="operadores(' % ')" color="light">%</ion-button>
+          <ion-button class="btn2" (click)="operadores('%')" color="light">%</ion-button>
         </ion-col>
         <ion-col>
           <ion-button class="btn2" (click)="digitos('3,14159265358979323846')" color="light">π</ion-button>

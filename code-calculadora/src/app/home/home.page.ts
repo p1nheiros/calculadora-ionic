@@ -73,26 +73,27 @@ export class HomePage {
   calcular() {
     if (!this.ligado) return;
 
-    if (this.operador == " + " && this.segundo_elemento != "") {
+    if (this.operador == "+" && this.segundo_elemento != "") {
       this.resultado = (parseFloat(this.primeiro_elemento) + parseFloat(this.segundo_elemento)).toString();
       this.memoria = this.primeiro_elemento + this.operador + this.segundo_elemento + " = " + this.resultado;
       this.is_novo_calculo = true;
-    } else if (this.operador == " - " && this.segundo_elemento != "") {
+    } else if (this.operador == "-" && this.segundo_elemento != "") {
       this.resultado = (parseFloat(this.primeiro_elemento) - parseFloat(this.segundo_elemento)).toString();
       this.memoria = this.primeiro_elemento + this.operador + this.segundo_elemento + " = " + this.resultado;
       this.is_novo_calculo = true;
-    } else if (this.operador == " * " && this.segundo_elemento != "") {
+    } else if (this.operador == "*" && this.segundo_elemento != "") {
       this.resultado = (parseFloat(this.primeiro_elemento) * parseFloat(this.segundo_elemento)).toString();
       this.memoria = this.primeiro_elemento + this.operador + this.segundo_elemento + " = " + this.resultado;
       this.is_novo_calculo = true;
-    } else if (this.operador == " / " && this.segundo_elemento != "") {
+    } else if (this.operador == "/" && this.segundo_elemento != "") {
       this.resultado = (parseFloat(this.primeiro_elemento) / parseFloat(this.segundo_elemento)).toString();
       this.memoria = this.primeiro_elemento + this.operador + this.segundo_elemento + " = " + this.resultado;
       this.is_novo_calculo = true;
-    } else if (this.operador == " % " && this.segundo_elemento != "") {
-      this.resultado = (parseFloat(this.primeiro_elemento) % parseFloat(this.segundo_elemento)).toString();
-      this.memoria = this.primeiro_elemento + this.operador + this.segundo_elemento + " = " + this.resultado;
+    } else if (this.operador == "%") {
+      this.resultado = (parseFloat(this.primeiro_elemento) / 100).toString();
+      this.memoria = this.primeiro_elemento + this.operador + " = " + this.resultado;
       this.is_novo_calculo = true;
+      this.is_segundo_elemento = false;
     } else {
       if (this.operador == "") {
         this.alerta("Nenhum operador foi selecionado.");
@@ -166,10 +167,21 @@ BOTÃO DE ON/OFF.
 RESET APENAS PARA A MEMÓRIA.
 BACKSPACE.
 FUNCIONAMENTO DA VIRGULA NAS OPERAÇÕES, ALTERANDO O parseInt para parseFloat.
+NUMERO PI
+PORCENTAGEM
 */
 
 /* ERROS E BUGS:
-BACKSPACE BUGA O OPERADOR
-PORCENTAGEM ESTA COM BUG
-TESTAR ALERTAS
+BACKSPACE BUGA O OPERADOR E NÃO ALTERA A OPERAÇÃO
+PORCENTAGEM PERMITE SEGUNDO ELEMENTO
+TESTAR ALERTAS 
+NADA FUNCIONA DEPOIS DE UMA OPERAÇÃO
+*/
+
+/* CORREÇÕES:
+RESET MEMÓRIA OK
+BOTÃO ON/OFF OK
+VÍRGULA OK
+NÚMERO PI OK
+PORCENTAGEM OK
 */

@@ -22,9 +22,16 @@ export class HomePage {
 
 
   constructor(private toastController: ToastController) { }
-  
+
   digitos(valor: string) {
     if (!this.ligado) return;
+
+    const combinedInputLength = this.resultado.length + this.operador.length + this.segundo_elemento.length;
+
+    if (combinedInputLength >= 50) {
+      this.alerta("O limite de caracteres foi atingido.");
+      return;
+    }
 
     console.log(this.is_novo_calculo);
     if (this.is_novo_calculo) {
@@ -60,6 +67,13 @@ export class HomePage {
 
   operadores(operador: string) {
     if (!this.ligado) return;
+
+    const combinedInputLength = this.resultado.length + this.operador.length;
+
+    if (combinedInputLength >= 50) {
+      this.alerta("O limite de caracteres foi atingido.");
+      return;
+    }
 
     if (!this.operador_inserido && this.verifica_zero == false) {
       this.primeiro_elemento = this.resultado;
@@ -101,7 +115,7 @@ export class HomePage {
         this.alerta("O segundo elemento não foi definido.");
       } else {
         this.alerta("Tudo está definido corretamente.");
-      }      
+      }
     }
   }
 
@@ -184,4 +198,5 @@ BOTÃO ON/OFF OK
 VÍRGULA OK
 NÚMERO PI OK
 PORCENTAGEM OK
+LIMITE DE CARACTERES OK
 */
